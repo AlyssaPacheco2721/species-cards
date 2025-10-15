@@ -12,7 +12,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   gap: 2rem;
-  padding: 2rem;
+  padding: 0.5rem;
 }
 
 /* Card container */
@@ -145,4 +145,5 @@ img {
   height: 90px;
   object-fit: contain;
   margin-bottom: 0.35rem;
+
 }
