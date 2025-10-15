@@ -1,0 +1,148 @@
+body {
+  font-family: sans-serif;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+}
+
+/* Horizontal Layout */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Card container */
+.card {
+  flex: 0 0 240px;
+  max-width: 240px;
+  width: 240px;
+  height: 320px;             /* slightly taller to fit all content */
+  perspective: 1000px;
+  box-sizing: border-box;
+}
+
+/* Flip animation */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+.card:hover .card-inner { transform: rotateY(180deg); }
+
+/* Front & back faces */
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  background: #f7f7f7;
+  overflow: hidden;          /* keeps content within rounded corners */
+}
+.card-back { transform: rotateY(180deg); }
+
+/* Titles */
+.card-front h3 {
+  margin: 0.4rem 0 0.15rem 0;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #222;
+}
+.card-front p em {
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+  display: block;
+  text-align: center;
+  margin: 0;
+}
+
+/* Conservation status */
+.status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin: 0.35rem 0;
+}
+.status.threatened { background-color: #f39c12; }
+.status.endangered { background-color: #e74c3c; }
+.status.special-concern { background-color: #2980b9; }
+
+/* Small front facts */
+.quick-fact {
+  list-style-type: disc;
+  font-size: 0.78rem;
+  color: #444;
+  margin: 0.35rem 0 0 1rem;
+  padding: 0;
+  text-align: left;
+  line-height: 1.25;
+}
+.quick-fact li { margin-bottom: 0.15rem; }
+
+/* Back image — consistent size across species */
+.card-back img {
+  display: block;
+  width: 100%;
+  height: 150px;            /* fixed height for all cards */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.6rem;
+}
+
+/* Quick Facts box on back */
+.fact-box {
+  background-color: #f7f7f7;
+  border-left: 4px solid #2980b9;
+  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+  margin-top: 0.4rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.fact-title {
+  font-weight: 700;
+  color: #2980b9;
+  margin: 0 0 0.2rem 0;
+  font-size: 0.82rem;
+  text-align: left;
+  letter-spacing: 0.3px;
+}
+.fact-box .quick-fact {
+  list-style-type: none;
+  font-size: 0.76rem;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+}
+.fact-box .quick-fact li { margin-bottom: 0.15rem; }
+
+/* Adjust spacing for longer endangered text (Roseate Tern) */
+.fact-box.endangered .quick-fact li {
+  margin-bottom: 0.1rem;
+}
+
+/* Front icons/photos */
+img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 0.35rem;
+}
