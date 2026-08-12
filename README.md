@@ -82,20 +82,22 @@ Each card incorporates visual assets and species imagery to support accessible e
 
 ## Role Within the Westport River Watershed Dashboard
 
-This repository represents one component of a larger interactive environmental communication project.
+The species cards serve as the **Species Spotlight** component of the larger **Westport River Watershed Dashboard**.
 
-The species cards were embedded within the **Westport River Watershed Dashboard** to support public understanding of local biodiversity and conservation.
+Designed as compact information cards, the component highlights three locally relevant species — **Monarch Butterfly, Piping Plover, and Roseate Tern** — and provides users with accessible species and conservation information directly within the dashboard experience.
 
-The larger dashboard integrates environmental topics such as:
+The Species Spotlight is part of a broader environmental communication project exploring:
 
 - Biodiversity
 - Water quality
 - Land use
 - Climate resilience
 - Watershed health
-- Public environmental education
+- Human impacts
 
-This component demonstrates how custom web development can extend GIS-based environmental applications beyond standard mapping tools.
+By embedding custom **HTML and CSS** within the dashboard, the Species Spotlight extends the GIS-based application beyond maps and data visualizations to include visually engaging, public-facing environmental education.
+
+This component demonstrates how **web development, visual design, and science communication** can be integrated into an interactive environmental GIS project.
 
 ---
 
