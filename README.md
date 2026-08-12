@@ -141,4 +141,3 @@ Vector graphics were created or prepared for use within the species-card interfa
 **Alyssa Pacheco**
 
 Environmental Scientist | Coastal & Marine Science | GIS & Environmental Data Analysis
-```
